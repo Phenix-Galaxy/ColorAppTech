@@ -1,2 +1,2 @@
 # ColorAppTech
-Colo rApp Tech Site
+Color App Tech Site
