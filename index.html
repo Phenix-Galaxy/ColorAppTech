@@ -2,50 +2,216 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Color App Tech · Mobile App Studio</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Color App Tech</title>
-  <meta name="description" content="Official website of Color App Tech." />
+  <meta name="description" content="Color App Tech is an independent mobile app studio building high-quality Android experiences with a focus on performance, design, and maintainability." />
+
   <style>
+    :root {
+      --bg: #0b0d17;
+      --bg-soft: #0f1324;
+      --glass: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #f4f6fb;
+      --muted: #a1a6c3;
+      --primary: #7aa2ff;
+      --gradient: linear-gradient(135deg, #7aa2ff, #9f7bff, #ff7bd5);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
-    }
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 48px 24px;
-    }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 16px;
-    }
-    p {
-      font-size: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1b2150, transparent),
+                  radial-gradient(800px 400px at 90% 10%, #3a1d55, transparent),
+                  var(--bg);
+      color: var(--text);
       line-height: 1.6;
-      margin-bottom: 12px;
-      color: #444;
     }
-    .footer {
-      margin-top: 48px;
-      font-size: 14px;
-      color: #777;
-    }
+
     a {
-      color: #0066cc;
+      color: inherit;
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
+
+    header {
+      padding: 120px 24px 96px;
+      text-align: center;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+
+    header h1 span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 40px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 14px;
+      background: var(--gradient);
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 10px 40px rgba(122, 162, 255, 0.35);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+
+    .card {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.02)
+      );
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    footer {
+      padding: 48px 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
+      header p {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Color App Tech</h1>
 
-   
+<body>
+
+<header>
+  <h1><span>Color App Tech</span></h1>
+  <p>
+    An independent mobile app studio crafting
+    high-quality Android experiences with a focus on
+    performance, design, and long-term maintainability.
+  </p>
+
+  <a class="cta" href="https://play.google.com/store/apps/developer?id=Color+App+Tech" target="_blank">
+    View on Google Play →
+  </a>
+</header>
+
+<section>
+  <h2>What We Build</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Messaging Applications</h3>
+      <p>
+        Modern SMS & MMS apps with rich theming,
+        media handling, privacy controls, and smooth performance
+        on real-world devices.
+      </p>
+    </div>
+    <div class="card">
+      <h3>UI & Theme Systems</h3>
+      <p>
+        Scalable theme architectures supporting local and online assets,
+        per-conversation customization, and efficient resource management.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Media & Performance Tools</h3>
+      <p>
+        Image and video utilities optimized for mobile workflows,
+        including compression, preview pipelines, and memory safety.
+      </p>
+    </div>
   </div>
+</section>
+
+<section>
+  <h2>How We Work</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Engineering-First</h3>
+      <p>
+        Architecture, performance, and correctness come first.
+        No over-engineering, no shortcuts that hurt the future.
+      </p>
+    </div>
+    <div class="card">
+      <h3>User-Driven Decisions</h3>
+      <p>
+        Features are shaped by real user behavior,
+        not by trends or assumptions.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Long-Term Maintainability</h3>
+      <p>
+        Clean boundaries, readable code, and systems
+        designed to evolve without rewrites.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Color App Tech. All rights reserved.
+</footer>
+
 </body>
 </html>
